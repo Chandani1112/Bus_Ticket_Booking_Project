@@ -1,0 +1,200 @@
+:root {
+  --primaryColor: hsl(26, 93%, 50%);
+  --hoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 10%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --grayBg: hsl(0, 0%, 96%);
+  --grayText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.seat-selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.seat-layout {
+  flex: 2;
+  background-color: var(--whiteColor);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.seat-layout-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.deck-button {
+  flex: 1;
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.deck-button.active {
+  background-color: var(--hoverColor);
+}
+
+.deck-button:hover {
+  background-color: var(--hoverColor);
+}
+
+.seats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  background-color: var(--grayBg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.seat.available {
+  background-color: green;
+}
+
+.seat.selected {
+  background-color: var(--primaryColor);
+}
+
+.seat.booked {
+  background-color: red;
+}
+
+.seat.ladies {
+  background-color: pink;
+}
+
+.seat.male {
+  background-color: purple;
+}
+
+.seat-legend {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.legend-item::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.legend-item.available::before {
+  background-color: green;
+}
+
+.legend-item.booked::before {
+  background-color: red;
+}
+
+.legend-item.selected::before {
+  background-color: var(--primaryColor);
+}
+
+.legend-item.ladies::before {
+  background-color: pink;
+}
+
+.legend-item.male::before {
+  background-color: purple;
+}
+
+.seat-form {
+  flex: 2;
+  text-align: center;
+  background-color: var(--whiteColor);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.confirm-seats-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.confirm-seats-button:hover {
+  background-color: var(--hoverColor);
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seat-layout {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .seats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .seat-legend {
+    justify-content: center;
+  }
+
+  .seat-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .seats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+

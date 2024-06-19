@@ -1,0 +1,412 @@
+
+
+:root {
+  --primaryColor: hsl(26, 93%, 50%);
+  --hoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 10%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --grayBg: hsl(0, 0%, 96%);
+  --grayText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.bus-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: var(--grayBg);
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-left: 12%;
+  width: 135%;
+}
+
+.bus-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.bus-image {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.bus-details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex: 1;
+  margin-left: 20px;
+}
+
+.bus-name {
+  font-weight: bold;
+  color: var(--blackColor);
+}
+
+.view-seats-button {
+  padding: 8px 16px;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 12%;
+}
+
+.view-seats-button:hover {
+  background-color: var(--hoverColor);
+}
+
+@media (max-width: 768px) {
+  .bus-card {
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+  }
+  
+  .bus-image {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .bus-details {
+    align-items: center;
+    margin-left: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .bus-name {
+    font-size: 1.4rem;
+  }
+  
+  .bus-type,
+  .bus-time,
+  .bus-duration,
+  .bus-price,
+  .bus-seats {
+    font-size: 0.9rem;
+  }
+  
+  .view-seats-button {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bus-card {
+    padding: 10px;
+    width: 110%;
+    margin-left: -18px;
+  }
+  
+  .bus-name {
+    font-size: 1.2rem;
+  }
+  
+  .bus-type,
+  .bus-time,
+  .bus-duration,
+  .bus-price,
+  .bus-seats {
+    font-size: 0.8rem;
+    margin: 4px;
+  }
+  
+  .view-seats-button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    display: flex;
+    /* padding: 20px; */
+    flex-direction: column;
+  }
+}
+
+.bus-info {
+  flex: 3;
+  margin-right: 20px;
+}
+
+.bus-header {
+  margin-bottom: -38px;
+}
+
+.bus-type {
+  font-size: 14px;
+  color: #777;
+  margin-top: 0px;
+}
+
+.bus-timing {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 40%;
+  margin-right: -18%;
+}
+.departure, .arrival {
+  text-align: center;
+}
+
+.bus-date {
+  font-size: 14px;
+  color: #555;
+}
+
+.bus-time {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.bus-location {
+  font-size: 14px;
+  color: #555;
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.bus-amenities {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.amenity {
+  font-size: 14px;
+  color: #777;
+  margin-right: 10px;
+}
+
+.bus-policies {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.bus-policies button {
+  font-size: 14px;
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.bus-policies button:hover {
+  text-decoration: underline;
+}
+
+.bus-offer {
+  font-size: 14px;
+  color: #d9534f;
+}
+
+.bus-price-section {
+  flex: 1;
+  text-align: center;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #777;
+  text-decoration: line-through;
+}
+
+.discounted-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d9534f;
+  margin: 5px 0;
+}
+
+.save-amount {
+  font-size: 14px;
+  color: #5cb85c;
+  margin-bottom: 10px;
+}
+
+.show-seats-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color:var(--primaryColor);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.show-seats-button:hover {
+  background-color:var(--primaryColor);
+}
+
+.seats-available {
+  font-size: 14px;
+  color: #777;
+}
+
+.modal {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 900px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.close-modal-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px; /* Adjust as needed for responsiveness */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-section {
+  width: 100%;
+}
+
+.dropdown-section h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.dropdown-section p {
+  margin: 8px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Amenity button styles */
+.amenities-button {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+.amenities-button:hover {
+  text-decoration: underline;
+}
+
+/* Adjust positioning for the dropdown */
+.bus-amenities {
+  position: relative;
+}
+
+.bus-amenities .dropdown-content {
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+/* Policies dropdown positioning */
+.bus-policies .dropdown {
+  margin-bottom: 10px;
+}
+
+.bus-policies .dropdown-content {
+  width: 300%;
+ 
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dropdown-content {
+    min-width: 100%;
+    padding: 15px;
+    box-shadow: none;
+    border: none;
+  }
+
+  .dropdown-section h4 {
+    font-size: 16px;
+  }
+
+  .dropdown-section p {
+    font-size: 14px;
+  }
+  .bus-timing {
+    padding-left: 32%;
+    margin-right: -10%;
+    margin-top: 35px;
+}
+}
+
+
+
+

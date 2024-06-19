@@ -1,0 +1,148 @@
+/* Testimonial.css */
+
+:root{
+    --primaryColor : hsl(26,93%,50%);
+    --HoverColor : hsl(26,90%,42%);
+   --whiteColor : hsl(0, 0%,100%);
+    --blackColor : hsl(0,0%,10%);
+    --textColor : hsl(240,1%,48%);
+    --whiteColorDeam : hsl(0,0%,93%);
+    --grayBg: hsl(0,0%,96%);
+    --grayText : rgb(190,190,190);
+    --inputColor:hsl(330,12%,97%);
+  }
+.testimonial-container {
+    padding: 20px;
+    background: var(--primaryColor);
+    border-radius: 10px;
+  }
+  
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+  h2{
+    color: var(--whiteColor);
+  }
+  
+  
+  /* Media Query for Responsive Design */
+  @media (max-width: 768px) {
+    .testimonial {
+      padding: 15px;
+    }
+    .testimonial-image {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+ 
+  
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+  }
+  
+  .slick-arrow {
+    position: absolute;
+    top: 63%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 1.5em;
+    cursor: pointer;
+    background:var(--primaryColor);
+    padding: 0px !important;
+    border-radius: 50%;
+  }
+  
+  .slick-arrow:hover {
+    background:var(--primaryColor);
+  }
+  
+  .slick-prev {
+    left: 10px !important;
+  }
+  
+  .slick-next {
+    right: 10px;
+  }
+  
+  .slick-dots {
+    position: absolute;
+    bottom: 13px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .slick-dots li {
+   height: 0px;
+  }
+  
+  .slick-dots li button {
+    font-size: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  .testimonial-content {
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--primaryColor);
+  }
+  
+  .testimonial-author {
+    font-style: italic;
+    font-size: 14px;
+  }
+  
+  .slick-slide img {
+    display: unset !important;
+}
+  
